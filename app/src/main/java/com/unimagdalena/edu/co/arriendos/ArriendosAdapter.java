@@ -1,47 +1,20 @@
 package com.unimagdalena.edu.co.arriendos;
 
-import android.app.Activity;
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 
-import java.util.ArrayList;
+import com.chad.library.adapter.base.BaseQuickAdapter;
+import com.chad.library.adapter.base.BaseViewHolder;
 
-public class ArriendosAdapter extends RecyclerView.Adapter<ArriendosAdapter.ViewHolder> {
+import java.util.List;
 
-    private Activity activity;
-    private ArrayList<Arriendos> arriendos;
+public class ArriendosAdapter extends BaseQuickAdapter<Arriendos> {
 
-    public ArriendosAdapter(Activity activity, ArrayList<Arriendos> arriendos) {
-        this.activity = activity;
-        this.arriendos = arriendos;
+    public ArriendosAdapter(Context context, List<Arriendos> data) {
+        super(context, data);
     }
 
     @Override
-    public ArriendosAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        Context context = parent.getContext();
+    protected void convert(BaseViewHolder baseViewHolder, Arriendos arriendos) {
 
-        View arriendos = LayoutInflater.from(context).inflate(R.layout.arriendos_list_item_row, parent, false);
-
-        return new ViewHolder(arriendos);
-    }
-
-    @Override
-    public void onBindViewHolder(ArriendosAdapter.ViewHolder holder, int position) {
-
-    }
-
-    @Override
-    public int getItemCount() {
-        return arriendos.size();
-    }
-
-    public class ViewHolder extends RecyclerView.ViewHolder {
-
-        public ViewHolder(View itemView) {
-            super(itemView);
-        }
     }
 }
