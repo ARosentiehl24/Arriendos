@@ -43,4 +43,5 @@ dependencies {
     compile 'com.github.2359media:EasyAndroidAnimations:0.8'
     compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:v1.7.4'
     compile 'com.emmasuzuki:easyform:1.0.0'
+    compile 'com.android.volley:volley:1.0.0'
 }
